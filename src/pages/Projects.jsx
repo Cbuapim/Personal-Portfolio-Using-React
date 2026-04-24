@@ -2,53 +2,33 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    index: '01',
-    title: 'Brain Blast',
-    desc: 'Interactive quiz application with multiple categories, live scoring, and adaptive feedback. Built with React and custom hooks.',
-    tech: ['React', 'JavaScript', 'CSS'],
-    github: 'https://github.com/cbuapim/brain-blast',
-    year: '2024',
+    number: "01",
+    name: "Milestone Todo",
+    year: "2024",
+    image: "milestone-todo.png",
+    description: "A React Native project manager with gradient task cards, circular progress rings, and a bottom-sheet task detail view.",
+    tags: ["React Native", "Expo", "Mobile"],
+    link: "https://cbuapim.github.io/React-Native-Expo-Todo/"
   },
   {
-    index: '02',
-    title: 'Milestone App',
-    desc: 'Project milestone tracker for managing tasks, deadlines, and team progress with an intuitive kanban-style dashboard.',
-    tech: ['React', 'Node.js', 'REST API'],
-    github: 'https://github.com/cbuapim/milestone-app',
-    year: '2024',
+    number: "02",
+    name: "Exercise Tracker",
+    year: "2024",
+    image: "exercise-tracker.png",
+    imagePosition: "top center",
+    description: "A React Native Expo fitness app with rep counting, live timers, and progress tracking built for in-workout use.",
+    tags: ["React Native", "Expo", "Mobile"],
+    link: "https://cbuapim.github.io/Updated-Exercise-App/"
   },
   {
-    index: '03',
-    title: 'Todo List App',
-    desc: 'Minimal todo application with local storage persistence, priority filtering, and keyboard shortcuts.',
-    tech: ['React', 'JavaScript', 'CSS'],
-    github: 'https://github.com/cbuapim/todo-app',
-    year: '2023',
-  },
-  {
-    index: '04',
-    title: 'Countdown Timer',
-    desc: 'Minimalist timer with presets, custom durations, audio cues, and a distraction-free fullscreen mode.',
-    tech: ['React', 'JavaScript', 'CSS'],
-    github: 'https://github.com/cbuapim/countdown-timer',
-    year: '2023',
-  },
-  {
-    index: '05',
-    title: 'Exercise Tracker',
-    desc: 'Fitness logging app to record workouts, track personal records, and visualize progress over time.',
-    tech: ['React', 'JavaScript', 'Charts.js'],
-    github: 'https://github.com/cbuapim/exercise-tracker',
-    year: '2023',
-  },
-  {
-    index: '06',
-    title: 'Menu App',
-    desc: 'Digital restaurant menu with category filtering, item detail modals, and a cart system.',
-    tech: ['React', 'JavaScript', 'CSS'],
-    github: 'https://github.com/cbuapim/menu-app',
-    year: '2023',
-  },
+    number: "03",
+    name: "Quiz App",
+    year: "2024",
+    image: "quiz-app.png",
+    description: "A React quiz application with multiple choice questions, answer review, and a scored summary screen.",
+    tags: ["React", "JavaScript", "Web"],
+    link: "https://cbuapim.github.io/Quiz-App/"
+  }
 ]
 
 export default function Projects() {
@@ -88,7 +68,7 @@ export default function Projects() {
         {/* Project list */}
         <div>
           {projects.map((p, i) => (
-            <ProjectRow key={p.index} project={p} i={i} />
+            <ProjectRow key={p.number} project={p} i={i} />
           ))}
         </div>
       </div>
@@ -105,7 +85,7 @@ function ProjectRow({ project, i }) {
       transition={{ delay: i * 0.07, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       style={{
         display: 'grid',
-        gridTemplateColumns: '64px 1fr auto',
+        gridTemplateColumns: '64px 1fr 200px',
         gap: '0 40px',
         alignItems: 'start',
         padding: '40px 0',
@@ -117,7 +97,7 @@ function ProjectRow({ project, i }) {
       onMouseEnter={e => e.currentTarget.style.backgroundColor = '#fafafa'}
       onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
     >
-      {/* Index */}
+      {/* Number */}
       <p style={{
         fontFamily: 'var(--font-sans)',
         fontSize: 11,
@@ -126,7 +106,7 @@ function ProjectRow({ project, i }) {
         fontWeight: 400,
         letterSpacing: '0.05em',
       }}>
-        {project.index}
+        {project.number}
       </p>
 
       {/* Content */}
@@ -139,17 +119,17 @@ function ProjectRow({ project, i }) {
             letterSpacing: '-0.02em',
             color: 'var(--text)',
           }}>
-            {project.title}
+            {project.name}
           </h2>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--muted)', fontWeight: 400 }}>
             {project.year}
           </span>
         </div>
         <p style={{ fontSize: 14, color: '#777', lineHeight: 1.75, marginBottom: 20, maxWidth: 540, fontWeight: 300 }}>
-          {project.desc}
+          {project.description}
         </p>
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-          {project.tech.map(t => (
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
+          {project.tags.map(t => (
             <span key={t} style={{
               fontFamily: 'var(--font-sans)',
               fontSize: 11,
@@ -163,13 +143,9 @@ function ProjectRow({ project, i }) {
             </span>
           ))}
         </div>
-      </div>
-
-      {/* Link */}
-      <div style={{ paddingTop: 4 }}>
-        {project.github && (
+        {project.link && (
           <a
-            href={project.github}
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -180,14 +156,38 @@ function ProjectRow({ project, i }) {
               color: 'var(--muted)',
               transition: 'color 0.2s',
               fontWeight: 500,
-              whiteSpace: 'nowrap',
             }}
             onMouseEnter={e => e.target.style.color = 'var(--text)'}
             onMouseLeave={e => e.target.style.color = 'var(--muted)'}
           >
-            GitHub ↗
+            View Project ↗
           </a>
         )}
+      </div>
+
+      {/* Thumbnail */}
+      <div style={{
+        width: '100%',
+        aspectRatio: '16 / 9',
+        borderRadius: '4px',
+        overflow: 'hidden',
+        position: 'relative',
+      }}>
+        <a href={project.link} target="_blank" rel="noreferrer" style={{ display: 'block', width: '100%', height: '100%' }}>
+          <img
+            src={`/images/${project.image}`}
+            alt={project.name}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'top center',
+              display: 'block',
+            }}
+            onMouseEnter={e => e.target.style.opacity = '0.75'}
+            onMouseLeave={e => e.target.style.opacity = '1'}
+          />
+        </a>
       </div>
     </motion.div>
   )
