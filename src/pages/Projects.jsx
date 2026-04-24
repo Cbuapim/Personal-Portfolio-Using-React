@@ -175,7 +175,7 @@ function ProjectRow({ project, i }) {
       }}>
         <a href={project.link} target="_blank" rel="noreferrer" style={{ display: 'block', width: '100%', height: '100%' }}>
           <img
-            src={`/images/${project.image}`}
+            src={`/Personal-Portfolio-Using-React/images/${project.image}`}
             alt={project.name}
             style={{
               width: '100%',
