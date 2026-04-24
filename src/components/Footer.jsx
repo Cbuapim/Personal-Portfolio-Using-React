@@ -16,14 +16,14 @@ export default function Footer() {
       </p>
       <div style={{ display: 'flex', gap: 28 }}>
         {[
-          { href: 'https://github.com/cbuapim', label: 'GitHub' },
-          { href: 'https://linkedin.com/in/channarong-buapim', label: 'LinkedIn' },
+          { href: 'https://github.com/Cbuapim/Personal-Portfolio-Using-React', label: 'GitHub' },
+          { href: 'https://www.linkedin.com/in/cbuapim/', label: 'LinkedIn' },
         ].map(({ href, label }) => (
           <a
             key={label}
             href={href}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             style={{
               fontSize: 12,
               letterSpacing: '0.08em',

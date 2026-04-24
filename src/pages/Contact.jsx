@@ -95,14 +95,14 @@ export default function Contact() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {[
                 { label: 'Email', value: 'channarong.buapim@gmail.com', href: 'mailto:channarong.buapim@gmail.com' },
-                { label: 'GitHub', value: 'github.com/cbuapim', href: 'https://github.com/cbuapim' },
-                { label: 'LinkedIn', value: 'linkedin.com/in/channarong-buapim', href: 'https://linkedin.com/in/channarong-buapim' },
+                { label: 'GitHub', value: 'github.com/Cbuapim/Personal-Portfolio-Using-React', href: 'https://github.com/Cbuapim/Personal-Portfolio-Using-React' },
+                { label: 'LinkedIn', value: 'linkedin.com/in/cbuapim', href: 'https://www.linkedin.com/in/cbuapim/' },
               ].map(({ label, value, href }) => (
                 <a
                   key={label}
                   href={href}
                   target={href.startsWith('http') ? '_blank' : undefined}
-                  rel="noopener noreferrer"
+                  rel="noreferrer"
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
