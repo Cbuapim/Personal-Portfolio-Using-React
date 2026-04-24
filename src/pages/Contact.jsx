@@ -93,49 +93,100 @@ export default function Contact() {
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-              {[
-                { label: 'Email', value: 'channarong.buapim@gmail.com', href: 'mailto:channarong.buapim@gmail.com' },
-                { label: 'GitHub', value: 'github.com/Cbuapim/Personal-Portfolio-Using-React', href: 'https://github.com/Cbuapim/Personal-Portfolio-Using-React' },
-                { label: 'LinkedIn', value: 'linkedin.com/in/cbuapim', href: 'https://www.linkedin.com/in/cbuapim/' },
-              ].map(({ label, value, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith('http') ? '_blank' : undefined}
-                  rel="noreferrer"
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 4,
-                    padding: '24px 0',
-                    borderTop: '1px solid var(--border)',
-                    textDecoration: 'none',
-                    transition: 'opacity 0.2s',
-                  }}
-                  onMouseEnter={e => e.currentTarget.style.opacity = '0.6'}
-                  onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-                >
-                  <span style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: 10,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    color: 'var(--muted)',
-                    fontWeight: 500,
-                  }}>
-                    {label}
-                  </span>
-                  <span style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: 16,
-                    fontWeight: 300,
-                    color: 'var(--text)',
-                    letterSpacing: '-0.01em',
-                  }}>
-                    {value}
-                  </span>
-                </a>
-              ))}
+              <a
+                href="mailto:channarong.buapim@gmail.com"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 4,
+                  padding: '24px 0',
+                  borderTop: '1px solid var(--border)',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.2s',
+                }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.6'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+              >
+                <span style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: 10,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'var(--muted)',
+                  fontWeight: 500,
+                }}>Email</span>
+                <span style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: 16,
+                  fontWeight: 300,
+                  color: 'var(--text)',
+                  letterSpacing: '-0.01em',
+                }}>channarong.buapim@gmail.com</span>
+              </a>
+              <a
+                href="https://github.com/Cbuapim/Personal-Portfolio-Using-React"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 4,
+                  padding: '24px 0',
+                  borderTop: '1px solid var(--border)',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.2s',
+                }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.6'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+              >
+                <span style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: 10,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'var(--muted)',
+                  fontWeight: 500,
+                }}>GitHub</span>
+                <span style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: 16,
+                  fontWeight: 300,
+                  color: 'var(--text)',
+                  letterSpacing: '-0.01em',
+                }}>github.com/Cbuapim/Personal-Portfolio-Using-React</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cbuapim/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 4,
+                  padding: '24px 0',
+                  borderTop: '1px solid var(--border)',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.2s',
+                }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.6'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+              >
+                <span style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: 10,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'var(--muted)',
+                  fontWeight: 500,
+                }}>LinkedIn</span>
+                <span style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: 16,
+                  fontWeight: 300,
+                  color: 'var(--text)',
+                  letterSpacing: '-0.01em',
+                }}>linkedin.com/in/cbuapim</span>
+              </a>
             </div>
           </motion.div>
 

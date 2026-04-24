@@ -15,29 +15,40 @@ export default function Footer() {
         © {year} Channarong Buapim
       </p>
       <div style={{ display: 'flex', gap: 28 }}>
-        {[
-          { href: 'https://github.com/Cbuapim/Personal-Portfolio-Using-React', label: 'GitHub' },
-          { href: 'https://www.linkedin.com/in/cbuapim/', label: 'LinkedIn' },
-        ].map(({ href, label }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              fontSize: 12,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'var(--muted)',
-              transition: 'color 0.2s',
-              fontWeight: 400,
-            }}
-            onMouseEnter={e => e.target.style.color = 'var(--text)'}
-            onMouseLeave={e => e.target.style.color = 'var(--muted)'}
-          >
-            {label}
-          </a>
-        ))}
+        <a
+          href="https://github.com/Cbuapim/Personal-Portfolio-Using-React"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: 'var(--muted)',
+            transition: 'color 0.2s',
+            fontWeight: 400,
+          }}
+          onMouseEnter={e => e.target.style.color = 'var(--text)'}
+          onMouseLeave={e => e.target.style.color = 'var(--muted)'}
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/cbuapim/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: 'var(--muted)',
+            transition: 'color 0.2s',
+            fontWeight: 400,
+          }}
+          onMouseEnter={e => e.target.style.color = 'var(--text)'}
+          onMouseLeave={e => e.target.style.color = 'var(--muted)'}
+        >
+          LinkedIn
+        </a>
       </div>
     </footer>
   )
